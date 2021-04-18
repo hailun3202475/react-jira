@@ -1,3 +1,51 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "name": "周杰伦"
+    },
+    {
+      "id": 2,
+      "name": "张学友"
+    },
+    {
+      "id": 3,
+      "name": "刘德华"
+    },
+    {
+      "id": 4,
+      "name": "黎明"
+    },
+    {
+      "id": 5,
+      "name": "郭富城"
+    },
+    {
+      "id": 6,
+      "name": "凌俊杰"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "棋手管理",
+      "personId": 1,
+      "organization": "外卖组",
+      "created": 123131335123
+    },
+    {
+      "id": 2,
+      "name": "美团",
+      "personId": 2,
+      "organization": "美团组",
+      "created": 123131455123
+    },
+    {
+      "id": 3,
+      "name": "饿了么",
+      "personId": 3,
+      "organization": "吃饭组",
+      "created": 123131155123
+    }
+  ]
 }
