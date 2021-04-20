@@ -1,6 +1,6 @@
 import React from "react";
 import { SearchPanel } from "./search-panel";
-import { List } from "./list";
+import { List } from "list";
 import { useEffect, useState } from "react";
 import {cleanObject, useDebounce, useMount} from "../../utils";
 import * as qs from "qs";
@@ -37,8 +37,10 @@ export const ProjectListScreen = () => {
 
   return (
     <div>
-      <SearchPanel users={users} param={param} setParam={setParam} />
-      <List users={users} list={list} />
+      <SearchPanel users={users}
+                   param={param} setParam={setParam} />
+      <List users={users}
+            list={list} />
     </div>
   );
 };

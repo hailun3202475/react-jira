@@ -50,8 +50,8 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "husky": "^5.0.9",
     "eslint-config-prettier": "^8.2.0",
+    "husky": "^5.0.9",
     "json-serve": "^0.1.0",
     "lint-staged": "^10.5.4",
     "prettier": "2.2.1"
@@ -63,6 +63,6 @@
     }
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,css,md,ts,tsx}": "prettier --write"
   }
 }
