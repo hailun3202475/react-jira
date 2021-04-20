@@ -51,18 +51,15 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "eslint-config-prettier": "^8.2.0",
-    "husky": "^5.0.9",
+    "husky": "^6.0.0",
     "json-serve": "^0.1.0",
     "lint-staged": ">=10",
+    "mrm": "^2.6.2",
+    "mrm-preset-default": "^3.0.0",
     "prettier": "2.1.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
-    "*.{js,css,md,ts,tsx}": "prettier --write"
+    "*.{js,css,md,ts,tsx}": "prettier --write",
+    "*.{js,css,md}": "prettier --write"
   }
 }
