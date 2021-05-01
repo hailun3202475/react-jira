@@ -33,13 +33,11 @@ export const ProjectListScreen = () => {
         setUsers(await response.json());
       }
     });
-  }, []);
+  });
 
   return (
     <div>
-      <SearchPanel users={users}
-
-                   param={param} setParam={setParam} />
+      <SearchPanel users={users} param={param} setParam={setParam} />
       <List users={users} list={list} />
     </div>
   );
