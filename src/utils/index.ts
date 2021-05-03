@@ -43,3 +43,39 @@ export const useDebounce = <V>(value: V, delay?: number) => {
   }, [value, delay]);
   return debouncedValue;
 };
+
+export const useArray = <A>(
+  initialArray: A[]
+): [A[], () => void, (index: number) => void, (pv: A) => void] => {
+  const [value, setValue] = useState(initialArray);
+  useEffect(() => {
+    setValue(initialArray);
+  }, []);
+  const clear = () => {
+    setValue([]);
+  };
+  const removeIndex = (index: number) => {
+    let arr = [...value];
+    arr.splice(index, 1);
+    setValue(arr);
+  };
+  const add = (pv: A) => {
+    setValue([...value, pv]);
+  };
+  return [value, clear, removeIndex, add];
+};
+
+// export const useArray = <T>(initialArray: T[]) => {
+//   const [value, setValue] = useState(initialArray);
+//   return {
+//     value,
+//     setValue,
+//     add: (item: T) => setValue([...value, item]),
+//     clear: () => setValue([]),
+//     removeIndex: (index: number) => {
+//       const copy = [...value];
+//       copy.splice(index, 1);
+//       setValue(copy);
+//     },
+//   };
+// };
